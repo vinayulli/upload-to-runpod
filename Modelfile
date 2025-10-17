@@ -1,12 +1,11 @@
 # Modelfile
 from qwen3:1.7b
 adapter FROM /workspace/models/qwen-ie.gguf
-
 parameter num_ctx 30000
 parameter temperature 0.3
 parameter top_p 0.9
-
 template """<|im_start|>system
 {{ .System }}<|im_end|><|im_start|>user
 {{ .Prompt }}<|im_end|><|im_start|>assistant
 """
+
